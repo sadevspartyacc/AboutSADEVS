@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sadevs info</title>
+    <style>
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: sans-serif; background: #1a1a1a; color: #00ff88; }
+        div { font-size: 4rem; font-weight: bold; text-shadow: 0 0 20px rgba(0,255,136,0.3); }
+    </style>
+</head>
+<body>
+    <div id="counter">pls wait</div>
+
+    <script>
+        const startDate = new Date('2016-10-29T03:00:00').getTime();
+
+        function updateCounter() {
+            const now = new Date().getTime();
+            const diffSeconds = Math.floor((now - startDate) / 1000);
+            document.getElementById('counter').innerText = diffSeconds.toLocaleString() + ' seconds since I was born';
+        }
+
+        setInterval(updateCounter, 1000);
+        updateCounter();
+    </script>
+</body>
+</html>
