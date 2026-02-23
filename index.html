@@ -5,12 +5,17 @@
     <title>sadevs info</title>
     <style>
   #counter {
-      color:#FFAA01
+      color:#FFAA00;
+  }
+        #year {
+            color:#aa5500;
+        }
     </style>
 </head>
 <body>
     <h1>my name is Leo</h1>
-    <div id="counter"><h1>pls wait</h1></div>
+    <div id="counter">pls wait</div>
+    <div id="years">bro Im counting can you enable wifi</div>
 
     <script>
         const startDate = new Date('2016-10-29T03:00:00').getTime();
@@ -19,7 +24,7 @@
             const now = new Date().getTime();
             const diffSeconds = Math.floor((now - startDate) / 1000);
             document.getElementById('counter').innerText = diffSeconds.toLocaleString() + ' seconds since I was born';
-            document.getElementById('year').innerText = (diffSeconds/31536000).toLocaleString() + ' years';
+            document.getElementById('year').innerText = 'so thats '+(diffSeconds/31536000).toLocaleString() + ' years';
         }
 
         setInterval(updateCounter, 1000);
