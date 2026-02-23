@@ -24,7 +24,7 @@
             const now = new Date().getTime();
             const diffSeconds = Math.floor((now - startDate) / 1000);
             document.getElementById('counter').innerText = diffSeconds.toLocaleString() + ' seconds since I was born';
-            document.getElementById('year').innerText = 'so thats '+(diffSeconds/31536000).toLocaleString() + ' years';
+            document.getElementById('year').innerText = 'so thats '+(diffSeconds/31536000).toLocaleString().replace(",",".")+ ' years';
         }
 
         setInterval(updateCounter, 1000);
